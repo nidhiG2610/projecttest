@@ -41,8 +41,13 @@
                                 <td>{{$company->name}}</td>
                                 <td>{{$company->email}}</td>
                                 <td>
+                                @if( ($company->logo) !== null)
                                 <img src="{{ asset('/Logo/'.$company->logo) }}" alt="" title="" width="100" height="100">
-                                                                
+                                @else
+                                 <img src="{{ asset('/asset/myavatar.png') }}" alt="" title="" width="100" height="100">
+
+                                @endif
+                          
                                 </td>
                                 <td><a href="{{ route('companies.edit', $company->id)}}" class="btn btn-primary">Edit</a></td>
                                 <td>

@@ -145,8 +145,8 @@ class CompanyController extends Controller
 
      $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email:rfc,dns',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|dimensions:min_width=100,min_height=100',   
+            'email' => 'nullable|email:rfc,dns',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|dimensions:min_width=100,min_height=100',   
             'website' => 'nullable',
         ]);
       
