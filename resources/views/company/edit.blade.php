@@ -14,7 +14,7 @@
               <div class="card-header">
                 Update Employees
 
-              <a class="btn btn-primary float-right" href="{{ route('company.index')}}">Back</a>
+              <a class="btn btn-primary float-right" href="{{ route('companies.index')}}">Back</a>
 
               </div>
               <div class="card-body">
@@ -28,20 +28,24 @@
                   </div><br />
                 @endif
 
-                <form method="post" action="{{ route('company.update', $employee->id) }}">
+                <form method="post" action="{{ route('companies.update', $company->id) }}" enctype="multipart/form-data">
                       <div class="form-group">
                           @csrf
                           @method('PATCH')
-                          <label for="name">Show Name:</label>
-                          <input type="text" class="form-control" name="name" value="{{ $employee->name }}"/>
+                          <label for="name">Company Name:</label>
+                          <input type="text" class="form-control" name="name" value="{{ $company->name }}"/>
                       </div>
                       <div class="form-group">
-                          <label for="price">Show Genre :</label>
-                          <input type="text" class="form-control" name="email" value="{{ $employee->email }}"/>
+                          <label for="email">Email:</label>
+                          <input type="text" class="form-control" name="email" value="{{ $company->email }}"/>
                       </div>
                       <div class="form-group">
-                          <label for="price">Show IMDB Rating :</label>
-                          <input type="text" class="form-control" name="salary" value="{{ number_format($employee->salary, 2) }}"/>
+                                  <label for="logo">Company Logo :</label>
+                                  <input type="file" name="logo"/>
+                      </div>
+                      <div class="form-group">
+                          <label for="website">Company website:</label>
+                          <input type="text" class="form-control" name="website" value="{{ $company->website }}"/>
                       </div>
                       <button type="submit" class="btn btn-primary">Update Show</button>
                   </form>

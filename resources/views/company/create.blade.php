@@ -15,7 +15,7 @@
                       <div class="card-header">
                         Add Company
 
-                        <a class="btn btn-primary float-right" href="{{ route('employees.index')}}">Back</a>
+                        <a class="btn btn-primary float-right" href="{{ route('companies.index')}}">Back</a>
                       </div>
                       <div class="card-body">
                         @if ($errors->any())
@@ -27,22 +27,27 @@
                             </ul>
                           </div><br />
                         @endif
-                          <form method="post" action="{{ route('companies.store') }}">
+                          <form method="post" action="{{ route('companies.store') }}" enctype="multipart/form-data">
                               <div class="form-group">
                                   @csrf
-                                  <label for="name">Show Name:</label>
+                                  <label for="name">Company Name:</label>
                                   <input type="text" class="form-control" name="name"/>
                               </div>
                               <div class="form-group">
-                                  <label for="price">Show Genre :</label>
+                                  <label for="email">Email :</label>
                                   <input type="text" class="form-control" name="email"/>
                               </div>
                               <div class="form-group">
-                                  <label for="price">Show IMDB Rating :</label>
-                                  <input type="text" class="form-control" name="salary"/>
+                                  <label for="logo">Company Logo :</label>
+                                  <input type="file" name="logo"/>
                               </div>
-                              <button type="submit" class="btn btn-primary">Create Show</button>
+                              <div class="form-group">
+                                  <label for="website">Company website:</label>
+                                  <input type="text" class="form-control" name="website"/>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Create Company</button>
                           </form>
+                      </div> 
                 </div>
             </div>
         </div>

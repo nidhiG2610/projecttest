@@ -60,7 +60,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a  class="nav-link" href= {{ route('employees.index') }}> Company </a>
+                                <a  class="nav-link" href= {{ route('companies.index') }}> Company </a>
                             </li>
 
                             <li class="nav-item">

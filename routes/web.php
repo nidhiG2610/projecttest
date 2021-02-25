@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('employees', 'EmployeeController')->middleware('auth');
+Route::resource('companies', 'CompanyController')->middleware('auth');
 
 Auth::routes();
 
