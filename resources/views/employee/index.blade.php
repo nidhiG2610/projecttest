@@ -20,13 +20,14 @@
               @endif
 
               <div>
+              Employee List
               <a class="btn btn-primary float-right" href="{{ route('employees.create')}}">Create</a> 
               </div>
               <table class="table table-striped">
                 <thead>
                     <tr>
                       <td>ID</td>
-                      <td> Name</td>
+                      <td>Name</td>
                       <td>Email</td>
                       <td>Salary</td>   
                       <td colspan="2">Action</td>

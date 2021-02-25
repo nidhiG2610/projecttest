@@ -13,7 +13,7 @@
 
                 <div class="card uper">
                       <div class="card-header">
-                        Add Employe
+                        Add New Employe
 
                         <a class="btn btn-primary float-right" href="{{ route('employees.index')}}">Back</a>
                       </div>
@@ -30,18 +30,18 @@
                           <form method="post" action="{{ route('employees.store') }}">
                               <div class="form-group">
                                   @csrf
-                                  <label for="name">Show Name:</label>
+                                  <label for="name">Employee Name:</label>
                                   <input type="text" class="form-control" name="name"/>
                               </div>
                               <div class="form-group">
-                                  <label for="price">Show Genre :</label>
+                                  <label for="email">Email :</label>
                                   <input type="text" class="form-control" name="email"/>
                               </div>
                               <div class="form-group">
-                                  <label for="price">Show IMDB Rating :</label>
+                                  <label for="salary">Employee Salary :</label>
                                   <input type="text" class="form-control" name="salary"/>
                               </div>
-                              <button type="submit" class="btn btn-primary">Create Show</button>
+                              <button type="submit" class="btn btn-primary">Save Employe</button>
                           </form>
                 </div>
             </div>

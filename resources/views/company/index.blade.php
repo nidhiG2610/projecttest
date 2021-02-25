@@ -20,6 +20,7 @@
               @endif
 
               <div>
+              Comapny List
               <a class="btn btn-primary float-right" href="{{ route('companies.create')}}">Create</a> 
               </div>
               <table class="table table-striped">

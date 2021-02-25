@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card uper">
               <div class="card-header">
-                Update Employees
+                Update Company Details
 
               <a class="btn btn-primary float-right" href="{{ route('companies.index')}}">Back</a>
 
@@ -47,7 +47,7 @@
                           <label for="website">Company website:</label>
                           <input type="text" class="form-control" name="website" value="{{ $company->website }}"/>
                       </div>
-                      <button type="submit" class="btn btn-primary">Update Show</button>
+                      <button type="submit" class="btn btn-primary">Update Company</button>
                   </form>
               </div>
              </div>
